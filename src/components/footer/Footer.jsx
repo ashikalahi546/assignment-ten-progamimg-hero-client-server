@@ -3,12 +3,12 @@ import { BsTwitter } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { IoLogoLinkedin } from "react-icons/io";
-
+//
 const Footer = () => {
   return (
     <div className="bg-black lg:h-80 mt-7 w-full py-10">
-      <div className="lg:container mx-auto grid lg:grid-cols-3 md:grid-cols-2 lg:px-0 px-5 gap-5  text-white">
-        <div className="flex flex-col gap-8">
+      <div className="lg:container mx-auto xl:px-0 px-5 gap-5   grid lg:grid-cols-3 md:grid-cols-2 text-white">
+        <div className="flex flex-col gap-8 ">
           <h3 className="text-2xl font-medium">
             Tr<span className="text-pink-500">ave</span>lers
           </h3>
@@ -23,7 +23,7 @@ const Footer = () => {
             <li>FAQ</li>
           </ul>
         </div>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 ">
           <h2 className="font-medium text-2xl">Contact</h2>
 
           <div>
@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 ">
           <h2 className="font-medium text-2xl">Social Media</h2>
 
           <div>

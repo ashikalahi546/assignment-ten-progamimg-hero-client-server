@@ -50,7 +50,7 @@ const Login = () => {
   return (
     <div className="hero ">
       <div className="hero-content flex-col w-full">
-        <div className="card shrink-0 sm:w-4/12 w-full  shadow-2xl bg-base-100">
+        <div className="card shrink-0 xl:w-4/12 lg:w-5/12  sm:w-8/12 w-full  shadow-2xl bg-base-100">
           <h1 className="lg:text-4xl text-2xl font-medium text-center pt-5">Login</h1>
           <form onSubmit={handleLogin} className="card-body ">
             <div className="form-contro ">
