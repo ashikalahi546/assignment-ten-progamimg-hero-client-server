@@ -13,7 +13,7 @@ const Login = () => {
   const [emailError,setEmailError] = useState('');
   const [error,setError] = useState('');
   const [success,setSuccess] = useState('')
-  const {loginUser} = useContext(AuthContext)
+  const {loginUser,googleLogin,twitterLogin} = useContext(AuthContext)
   const handleLogin = e =>{
     e.preventDefault()
   
@@ -120,11 +120,11 @@ const Login = () => {
             </div>
 
             <div>
-              <div className="border p-2.5 rounded flex items-center gap-2 justify-center">
+              <div onClick={()=> googleLogin()} className="border p-2.5 rounded flex items-center gap-2 justify-center">
                 <GrGoogle />
                 <p className="font-medium">Login with Google</p>
               </div>
-              <div className="border p-2.5 rounded flex items-center gap-2 justify-center mt-3">
+              <div onClick={()=>twitterLogin()} className="border p-2.5 rounded flex items-center gap-2 justify-center mt-3">
                 <BsTwitter />
                 <p className="font-medium">Login with Twitter</p>
               </div>
