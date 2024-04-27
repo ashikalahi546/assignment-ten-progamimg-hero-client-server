@@ -4,10 +4,15 @@ import { GrGoogle } from "react-icons/gr";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../auth/AuthProvider";
+import { IoMdCheckmark } from "react-icons/io";
 
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState("");
+  
+  const [emailError,setEmailError] = useState('');
+  const [error,setError] = useState('');
+  const [success,setSuccess] = useState('')
   const {loginUser} = useContext(AuthContext)
   const handleLogin = e =>{
     e.preventDefault()
@@ -15,12 +20,29 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email,password)
+    if(!/@gmail\.com$/.test(email)){
+      setEmailError('Email must be end with @gmail.com');
+      return;
+    }
+    if(!/(?=.*[A-Z])/.test(password)){
+      setError('Must have an Uppercase letter in the password');
+      return;
+    }
+    if(!/(?=.*?[a-z])/.test(password)){
+      setError('Must have an lowercase letter in the password');
+      return
+    }
+    
+    setEmailError('')
+    setError('')
+    setSuccess('')
     loginUser(email,password)
     .then(result => {
       console.log(result.user)
+      setSuccess('User logged Successfully')
     })
     .catch(err =>{
-      console.log(err.message)
+      setError(err.message)
     })
   }
 
@@ -42,6 +64,11 @@ const Login = () => {
                 className="input input-bordered w-full"
                 required
               />
+              <div>
+                {
+                  emailError && <p>{emailError}</p>
+                }
+              </div>
             </div>
             <div className="form-control">
               <label className="label">
@@ -61,6 +88,11 @@ const Login = () => {
                 >
                   {showPassword ? <IoEyeOutline /> : <IoEyeOffOutline />}
                 </span>
+                <div className="text-red-500 font-medium text-center py-2">
+                  {
+                    error && <p>{error}</p>
+                  }
+                </div>
               </div>
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
@@ -97,6 +129,12 @@ const Login = () => {
                 <p className="font-medium">Login with Twitter</p>
               </div>
             </div>
+            <div className="font-medium  text-green-500 mt-3  ">
+            {
+              success && <p className="flex items-center text-center justify-center gap-2">{success}  <IoMdCheckmark /></p>
+
+            }
+          </div>
           </div>
         </div>
       </div>
