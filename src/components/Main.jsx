@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navber from "./Navber";
 import Footer from "./footer/Footer";
-import TouristsSpot from "./TouristsSpot";
+// import TouristsSpot from "./TouristsSpot";
 
 const Main = () => {
   return (
@@ -10,7 +10,7 @@ const Main = () => {
         <Navber></Navber>
   
         <Outlet />
-        <TouristsSpot/>
+        {/* <TouristsSpot/> */}
       </div>
 
       <Footer></Footer>

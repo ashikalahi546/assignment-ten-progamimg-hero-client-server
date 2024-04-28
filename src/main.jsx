@@ -17,13 +17,13 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    loader:()=> fetch('http://localhost:8000/travelers'),
+ 
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-       
+        loader:()=> fetch('http://localhost:8000/travelers'),
       },
       {
         path: "/login",
