@@ -6,7 +6,7 @@ import { IoLogoLinkedin } from "react-icons/io";
 //
 const Footer = () => {
   return (
-    <div className="bg-black lg:h-80 mt-7 w-full py-10 flex-wrap md:flex-nowrap">
+    <div className="bg-black lg:h-80 mt-7 w-full  py-10 flex-wrap md:flex-nowrap">
       <div className="lg:container mx-auto xl:px-0 px-5 gap-5   grid lg:grid-cols-3 md:grid-cols-2 text-white">
         <div className="flex flex-col gap-8 ">
           <h3 className="text-2xl font-medium">

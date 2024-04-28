@@ -11,16 +11,19 @@ import AddTouristsSpot from "./components/AddTouristsSpot";
 import AllTouristsSpot from "./components/AllTouristsSpot";
 import MyList from "./components/MyList";
 import AuthProvider from "./components/auth/AuthProvider";
+import TouristViewDetails from "./components/TouristViewDetails";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    loader:()=> fetch('http://localhost:8000/travelers'),
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
+       
       },
       {
         path: "/login",
@@ -42,6 +45,11 @@ const router = createBrowserRouter([
         path: "/mylist",
         element: <MyList></MyList>,
       },
+      {
+        path:'/touristViewDetails/:id',
+        element:<TouristViewDetails/>,
+        loader:({params})=>fetch(`http://localhost:8000/travelers${params.id}`)
+      }
     ],
   },
 ]);

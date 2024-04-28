@@ -1,9 +1,11 @@
 import {
   createUserWithEmailAndPassword,
+  onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
 } from "firebase/auth";
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.confiq";
 import { TwitterAuthProvider } from "firebase/auth";
 
@@ -13,6 +15,7 @@ const google = new GoogleAuthProvider();
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
+    const [user,setUser] = useState(null)
   const register = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
@@ -27,11 +30,30 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth,twitter)
   }
 
+  const logOut = ()=>{
+    return signOut(auth)
+  }
+
+  useEffect(()=>{
+  const unSubscribe =  onAuthStateChanged(auth,register =>{
+        console.log('user in the auth state changed',register)
+        setUser(register)
+    });
+    return ()=>{
+unSubscribe ()
+
+    }
+
+  },[])
+
   const authInfo = {
+    user,
+    setUser,
     register,
     loginUser,
     googleLogin,
-    twitterLogin
+    twitterLogin,
+    logOut
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
