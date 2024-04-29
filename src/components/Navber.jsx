@@ -77,7 +77,7 @@ const Navber = () => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
 
-              className="size-12 rounded-full relative hover"
+              className="size-12 rounded-full relative hover cursor-pointer"
               src="/image/user1.jpg"
               alt=""
             />

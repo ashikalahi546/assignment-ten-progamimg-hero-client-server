@@ -12,6 +12,7 @@ const MyList = () => {
     return (
         <div>
         {/* {travelers?.map (traveler=><Traveler traveler={traveler}></Traveler>)} */}
+        
         </div>
     );
 };

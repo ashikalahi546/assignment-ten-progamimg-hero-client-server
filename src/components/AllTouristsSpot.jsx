@@ -1,8 +1,25 @@
+// import { useLoaderData } from "react-router-dom";
+
+import { useEffect, useState } from "react";
+import Traveler from "./Traveler";
+
+
 
 
 const AllTouristsSpot = () => {
+    const [travelars,setTravelars] = useState([])
+useEffect(()=>{
+  fetch('/dammy.json')
+  .then(res=>res.json())
+  .then(data=>{
+    setTravelars(data)
+  })
+},[])
+
     return (
-        <div className="my-10">
+    <div>
+    <h1 className="text-4xl font-bold text-center my-5 ">All <span className="text-pink-500">Tourists Sport</span> </h1>
+          {/* <div className="my-10">
         <h1 className="text-3xl font-bold text-center">
         Update <span className="text-pink-500">Tourists Sport</span>
         </h1>
@@ -90,7 +107,14 @@ const AllTouristsSpot = () => {
           <button className="bg-pink-500 px-6 py-2 text-white rounded-lg font-medium hover:bg-pink-600 duration-150 delay-150">Update</button>
           </div>
         </form>
-      </div>
+      </div> */}
+ 
+<div className="grid grid-cols-3 gap-8 w-8/12 mx-auto">
+{
+  travelars?.map(travelar=><Traveler traveler={travelar}></Traveler>)
+ }
+</div>
+    </div>
     );
 };
 

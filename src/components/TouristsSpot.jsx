@@ -7,15 +7,7 @@ import SingleTouristSpot from "./SingleTouristSpot";
 const TouristsSpot = () => {
     
   const travelars = useLoaderData()
-//   const [travelars,setTravelars] = useState([])
-// useEffect(()=>{
-//   fetch('/dammy.json')
-//   .then(res=>res.json())
-//   .then(data=>{
-//     setTravelars(data)
-//   })
-// },[])
-// console.log(travelars)
+
   
     return (
         <div className="2xl:w-9/12 lg:w-11/12 mx-auto lg:px-0 px-5">
