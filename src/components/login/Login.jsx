@@ -2,14 +2,16 @@ import { useContext, useState } from "react";
 import { BsTwitter } from "react-icons/bs";
 import { GrGoogle } from "react-icons/gr";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../auth/AuthProvider";
 import { IoMdCheckmark } from "react-icons/io";
 
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState("");
-  const navigatge = useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
+  let from = location?.state?.from?.pathname || "/";
   
   const [emailError,setEmailError] = useState('');
   const [error,setError] = useState('');
@@ -42,7 +44,8 @@ const Login = () => {
       console.log(result.user)
 
       setSuccess('User logged Successfully')
-      navigatge("/addtourists");
+
+      navigate(from, { replace: true });
     })
     .catch(err =>{
       setError(err.message)

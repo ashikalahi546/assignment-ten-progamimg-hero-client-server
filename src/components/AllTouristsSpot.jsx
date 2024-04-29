@@ -9,12 +9,14 @@ import Traveler from "./Traveler";
 const AllTouristsSpot = () => {
     const [travelars,setTravelars] = useState([])
 useEffect(()=>{
-  fetch('/dammy.json')
+  fetch('http://localhost:8000/travelers')
   .then(res=>res.json())
   .then(data=>{
     setTravelars(data)
   })
 },[])
+
+console.log("t",travelars)
 
     return (
     <div>
