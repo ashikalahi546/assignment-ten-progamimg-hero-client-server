@@ -12,6 +12,7 @@ import AllTouristsSpot from "./components/AllTouristsSpot";
 import MyList from "./components/MyList";
 import AuthProvider from "./components/auth/AuthProvider";
 import TouristViewDetails from "./components/TouristViewDetails";
+import PrivateRoute from "./components/private/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/addtourists",
-        element: <AddTouristsSpot></AddTouristsSpot>,
+        element: <PrivateRoute><AddTouristsSpot></AddTouristsSpot></PrivateRoute>,
       },
       {
         path: "/alltourists",
@@ -43,12 +44,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/mylist",
-        element: <MyList></MyList>,
+        element: <PrivateRoute><MyList></MyList></PrivateRoute>,
+  
       },
       {
         path:'/touristViewDetails/:id',
         element:<TouristViewDetails/>,
-        loader:({params})=>fetch(`http://localhost:8000/travelers${params.id}`)
+        
       }
     ],
   },

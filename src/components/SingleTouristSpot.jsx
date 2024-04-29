@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 const SingleTouristSpot = ({ singleTouristSpot }) => {
 
   const { _id, image, profile, title, description, price } = singleTouristSpot;
+
   return (
     <div>
       <div className="relative">

@@ -2,13 +2,14 @@ import { useContext, useState } from "react";
 import { BsTwitter } from "react-icons/bs";
 import { GrGoogle } from "react-icons/gr";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../auth/AuthProvider";
 import { IoMdCheckmark } from "react-icons/io";
 
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState("");
+  const navigatge = useNavigate();
   
   const [emailError,setEmailError] = useState('');
   const [error,setError] = useState('');
@@ -39,7 +40,9 @@ const Login = () => {
     loginUser(email,password)
     .then(result => {
       console.log(result.user)
+
       setSuccess('User logged Successfully')
+      navigatge("/addtourists");
     })
     .catch(err =>{
       setError(err.message)

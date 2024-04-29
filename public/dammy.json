@@ -1,0 +1,53 @@
+[
+  {
+    "profile": "https://i.ibb.co/WpjSmgm/image-7.png",
+    "image": "https://i.ibb.co/5Lh9BPz/Rectangle-25.png",
+    "title": "Saint Martin’s Island",
+    "description": "Saint Martin is part of the Leeward Islands in the Caribbean Sea. It comprises 2 separate countries.",
+    "price": "$5,000",
+    "descriptionTitle": "It is a small island in the north eastern part of the Bay of Bengal, created the southernmost part of our country. It is about 8 km west of the northwest coast of Myanmar, at the mouth of the Naf River. It is only 8 sq. Kilometre in size."
+  },
+  {
+    "profile": "https://i.ibb.co/nBs1JFp/image-7-1.png",
+
+    "image": "https://i.ibb.co/jwnTkWH/Rectangle-25-5.png",
+    "title": "Rangamati",
+    "description": "Saint Martin is part of the Leeward Islands in the Caribbean Sea. It comprises 2 separate countries.",
+    "price": "$2,890",
+    "descriptionTitle": "Rangamati is located in the Chittagong Division. It is bordered by the Tripura state of India to the north .Rangamati is the only district in Bangladesh with international borders with two countries: India and Myanmar."
+  },
+  {
+    "profile": "https://i.ibb.co/zSDtKMY/image-7-2.png",
+
+    "image": "https://i.ibb.co/T0K81Xr/Rectangle-25-1.png",
+    "title": "Cox’s Bazar",
+    "description": "Saint Martin is part of the Leeward Islands in the Caribbean Sea. It comprises 2 separate countries.",
+    "price": "$3,098",
+    "descriptionTitle": "Cox's Bazar is a seaside town, a fishing port and district headquarters in Bangladesh. It is known for its wide and long sandy beach, which is considered by many as the world's longest natural sandy sea beach."
+  },
+  {
+    "profile": "https://i.ibb.co/WtmWGXT/image-7-3.png",
+    "image": "https://i.ibb.co/VC1bdWB/Rectangle-25-2.png",
+    
+    "title": "Sundarban",
+    "description": "Saint Martin is part of the Leeward Islands in the Caribbean Sea. It comprises 2 separate countries.",
+    "price": "$1,999",
+    "descriptionTitle": "The Sundarbans mangrove forest, one of the largest such forests in the world (140,000 ha), lies on the delta of the Ganges, Brahmaputra and Meghna rivers on the Bay of Bengal. It is adjacent to the border of India’s Sundarbans World Heritage site inscribed in 1987"
+  },
+  {
+    "profile": "https://i.ibb.co/TvGTCRL/image-7-4.png",
+    "image": "https://i.ibb.co/SfGFNJK/Rectangle-25-4.png",
+    "title": "Bandarban ",
+    "description": "Saint Martin is part of the Leeward Islands in the Caribbean Sea. It comprises 2 separate countries.",
+    "price": "$4,999",
+    "descriptionTitle": "Bandarban is a city in the Chittagong Hill Tracts of southeastern Bangladesh. It is the headquarters of Bandarban District. It is located on the Sangu River."
+  },
+  {
+    "profile": "https://i.ibb.co/FzMyx7Y/image-7-5.png",
+    "image": "https://i.ibb.co/DGB5GhG/Rectangle-25-3.png",
+    "title": "Dhaka ",
+    "description": "Saint Martin is part of the Leeward Islands in the Caribbean Sea. It comprises 2 separate countries.",
+    "price": "$5,000",
+    "descriptionTitle": "Dhaka is a megacity, and has a population of 10.2 million residents as of 2022, and a population of over 22.4 million residents in Dhaka Metropolitan Area. It is widely considered to be the most densely populated built-up urban area in the world."
+  }
+]
