@@ -4,8 +4,11 @@ import { AuthContext } from "../auth/AuthProvider";
 
 
 const PrivateRoute = ({children}) => {
-    const {user} = useContext(AuthContext);
+    const {user,loading} = useContext(AuthContext);
     const location = useLocation();
+    if(loading){
+        return <div className="flex justify-center text-pink-500 "><span className="loading loading-infinity loading-lg "></span></div>
+    }
     if(user){
         return children;
     }

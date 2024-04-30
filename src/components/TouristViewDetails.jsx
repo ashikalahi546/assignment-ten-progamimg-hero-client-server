@@ -11,7 +11,7 @@ const TouristViewDetails = () => {
 
   useEffect(() => {
     (() => {
-      fetch(`http://localhost:8000/travelers/${id}`)
+      fetch(`https://assignment-server-rho-snowy.vercel.app/travelers/${id}`)
         .then((res) => res.json())
         .then((data) => setViewData(data));
     })();

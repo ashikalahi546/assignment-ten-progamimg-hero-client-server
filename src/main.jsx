@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=> fetch('http://localhost:8000/travelers'),
+        loader:()=> fetch('https://assignment-server-rho-snowy.vercel.app/travelers'),
       },
       {
         path: "/login",
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
       {
         path:'/updatetravelars/:id',
         element:<UpdateTravelars/>,
-        loader:({params})=>fetch(`http://localhost:8000/travelers/${params.id}`)
+        loader:({params})=>fetch(`https://assignment-server-rho-snowy.vercel.app/travelers/${params.id}`)
       }
     ],
   },

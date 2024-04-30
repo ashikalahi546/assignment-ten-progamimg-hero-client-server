@@ -2,7 +2,7 @@ import { MdLocationOn } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const SingleList = ({ singleList }) => {
+const SingleList = ({ singleList,setTravelars,travelars }) => {
   const { image, country, seasonality, total, short, _id, sport } = singleList;
 
  const handleDelete = (_id) =>{
@@ -21,7 +21,7 @@ const SingleList = ({ singleList }) => {
     
 console.log('delete confirm')
 
-fetch(`http://localhost:8000/travelars/${_id}`,{
+fetch(`https://assignment-server-rho-snowy.vercel.app/${_id}`,{
     method:"DELETE"
 })
 .then(res => res.json())
@@ -33,6 +33,9 @@ fetch(`http://localhost:8000/travelars/${_id}`,{
         text: "your Travelar has been deleted.",
         icon: "success"
       });
+        const remaining = travelars.filter(tra =>tra._id !==_id)
+      setTravelars(remaining)
+    
     }
 })
 }

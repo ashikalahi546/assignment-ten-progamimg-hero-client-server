@@ -9,7 +9,7 @@ const MyList = () => {
     (traveler) => traveler?.email == user?.email
   );
   useEffect(() => {
-    fetch("http://localhost:8000/travelers")
+    fetch("https://assignment-server-rho-snowy.vercel.app/travelers")
       .then((res) => res.json())
       .then((data) => {
         setTravelars(data);
@@ -24,7 +24,7 @@ const MyList = () => {
 
       <div className="">
         {myList.map((singleList, idx) => (
-          <SingleList singleList={singleList} key={idx}></SingleList>
+          <SingleList singleList={singleList} key={idx} setTravelars={setTravelars} travelars={travelars}></SingleList>
         ))}
       </div>
     </div>

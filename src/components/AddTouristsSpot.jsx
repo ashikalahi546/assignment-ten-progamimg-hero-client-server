@@ -30,7 +30,7 @@ const AddTouristsSpot = () => {
       short,
     };
     console.log(allAddValue);
-    fetch("http://localhost:8000/travelers", {
+    fetch("https://assignment-server-rho-snowy.vercel.app/travelers", {
       method: "POST",
       headers: {
         "content-type": "application/json",

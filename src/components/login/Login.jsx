@@ -16,7 +16,7 @@ const Login = () => {
   const [emailError,setEmailError] = useState('');
   const [error,setError] = useState('');
   const [success,setSuccess] = useState('')
-  const {loginUser,googleLogin,twitterLogin} = useContext(AuthContext)
+  const {loginUser,googleLogin,twitterLogin,setLoading} = useContext(AuthContext)
   const handleLogin = e =>{
     e.preventDefault()
     
@@ -50,6 +50,8 @@ const Login = () => {
     })
     .catch(err =>{
       setError(err.message)
+    }).finally(()=>{
+      setLoading(false)
     })
   }
 

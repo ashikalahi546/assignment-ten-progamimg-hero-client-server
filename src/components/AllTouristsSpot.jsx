@@ -4,7 +4,7 @@ import Traveler from "./Traveler";
 const AllTouristsSpot = () => {
   const [travelars, setTravelars] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:8000/travelers")
+    fetch("https://assignment-server-rho-snowy.vercel.app/travelers")
       .then((res) => res.json())
       .then((data) => {
         setTravelars(data);

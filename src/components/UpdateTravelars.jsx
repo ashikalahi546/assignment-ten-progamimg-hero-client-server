@@ -38,7 +38,7 @@ const UpdateTravelars = () => {
     console.log(allupdateValue);
 
 
-    fetch(`http://localhost:8000/travelers/${_id}`,{
+    fetch(`https://assignment-server-rho-snowy.vercel.app/travelers/${_id}`,{
         method:'PUT',
         headers:{
             'content-type':'application/json'
