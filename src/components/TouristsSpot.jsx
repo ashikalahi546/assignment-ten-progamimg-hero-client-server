@@ -14,7 +14,7 @@ const TouristsSpot = () => {
             <h1 className="text-center font-bold text-4xl my-10">Tourists <span className=" text-pink-500 ">Spot</span></h1>
             <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-10">
               {
-                travelars.map((singleTouristSpot,i) => <SingleTouristSpot singleTouristSpot={singleTouristSpot} key={i}></SingleTouristSpot>)
+                travelars.slice(0,6).map((singleTouristSpot,i) => <SingleTouristSpot singleTouristSpot={singleTouristSpot} key={i}></SingleTouristSpot>)
               }
             </div>
         </div>

@@ -1,123 +1,32 @@
-// import { useLoaderData } from "react-router-dom";
-
 import { useEffect, useState } from "react";
 import Traveler from "./Traveler";
 
-
-
-
 const AllTouristsSpot = () => {
-    const [travelars,setTravelars] = useState([])
-useEffect(()=>{
-  fetch('http://localhost:8000/travelers')
-  .then(res=>res.json())
-  .then(data=>{
-    setTravelars(data)
-  })
-},[])
+  const [travelars, setTravelars] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:8000/travelers")
+      .then((res) => res.json())
+      .then((data) => {
+        setTravelars(data);
+      });
+  }, []);
 
-console.log("t",travelars)
+  console.log("t", travelars);
 
-    return (
+  return (
     <div>
-    <h1 className="text-4xl font-bold text-center my-5 ">All <span className="text-pink-500">Tourists Sport</span> </h1>
-          {/* <div className="my-10">
-        <h1 className="text-3xl font-bold text-center">
-        Update <span className="text-pink-500">Tourists Sport</span>
-        </h1>
-        <form  className="w-8/12 mx-auto">
-          <div className="flex gap-5 mt-5">
-            <input
-              type="text"
-              placeholder="User name"
-              name="name"
-              className="input input-bordered input-primary w-full"
-            />
-            <input
-              type="text"
-              placeholder="Enter Your Email"
-              name="email"
-              className="input input-bordered input-primary w-full"
-            />
-          </div>
-          <div className="flex gap-5 mt-5">
-            <input
-              type="text"
-              placeholder="Country name"
-              name="country"
-              className="input input-bordered input-primary w-full"
-            />
-            <input
-              type="text"
-              placeholder="Sport name"
-              name="sport"
-              className="input input-bordered input-primary w-full"
-            />
-          </div>
-          <div className="flex gap-5 mt-5">
-            <input
-              type="text"
-              placeholder="Seasonality"
-              name="seasonality"
-              className="input input-bordered input-primary w-full"
-            />
-            <input
-              type="text"
-              placeholder="Location"
-              name="location"
-              className="input input-bordered input-primary w-full"
-            />
-          </div>
-          <div className="flex gap-5 mt-5">
-            <input
-              type="text"
-              placeholder="Average cost per person"
-              name="average"
-              className="input input-bordered input-primary w-full"
-            />
-            <input
-              type="text"
-              placeholder="Travel Time"
-              name="time"
-              className="input input-bordered input-primary w-full"
-            />
-          </div>
-          <div className="flex mt-5 gap-5">
-            <div className="flex flex-col gap-5  w-6/12">
-              <input
-                type="text"
-                placeholder="Total visitor per year?"
-                name="total"
-                className="input input-bordered input-primary w-full"
-              />
-              <input
-                type="text"
-                placeholder="Upload an image"
-                name="image"
-                className="input input-bordered input-primary w-full"
-              />
-            </div>
-  
-            <textarea
-            name="short"
-              className="textarea textarea-primary w-6/12"
-              placeholder="Short Description"
-            ></textarea>
-        
-          </div>
-          <div className="w-20 mx-auto mt-5">
-          <button className="bg-pink-500 px-6 py-2 text-white rounded-lg font-medium hover:bg-pink-600 duration-150 delay-150">Update</button>
-          </div>
-        </form>
-      </div> */}
- 
-<div className="grid grid-cols-3 gap-8 w-8/12 mx-auto">
-{
-  travelars?.map(travelar=><Traveler traveler={travelar}></Traveler>)
- }
-</div>
+      <h1 className="text-4xl font-bold text-center my-5 ">
+        All <span className="text-pink-500">Tourists Sport</span>
+      </h1>
+
+
+      <div className="grid grid-cols-3 gap-8 w-8/12 mx-auto">
+        {travelars?.map((travelar,e) => (
+          <Traveler traveler={travelar} key={e}></Traveler>
+        ))}
+      </div>
     </div>
-    );
+  );
 };
 
 export default AllTouristsSpot;

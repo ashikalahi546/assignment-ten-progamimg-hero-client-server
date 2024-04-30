@@ -1,6 +1,6 @@
 
 import Hero from "./Hero";
-import MyList from "./MyList";
+
 import TouristsSpot from "./TouristsSpot";
 
 
@@ -10,7 +10,7 @@ const Home = () => {
             <Hero></Hero>
             <TouristsSpot/>
          
-            <MyList></MyList>
+            
         </div>
     );
 };

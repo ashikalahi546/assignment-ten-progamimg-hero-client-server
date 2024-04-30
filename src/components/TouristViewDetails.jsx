@@ -21,8 +21,8 @@ const TouristViewDetails = () => {
   return (
     <div className="my-20">
       
-      <div className="mt-6 flex w-8/12 mx-auto items-center ">
-        <div className="w-6/12">
+      <div className="mt-6 flex gap-10 w-8/12 mx-auto items-center ">
+        <div className="">
           <div className="relative size-96">
             <img className=" relative size-96 " src={viewData?.image} alt="" />
             <p className="absolute bottom-6 text-white bg-pink-500 px-3 py-1.5 rounded-md font-medium right-5">

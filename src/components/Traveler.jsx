@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Traveler = ({traveler}) => {
-    const {image,title,profile,description,price   } = traveler
+    const {image,title,profile,description,price,_id   } = traveler
+
     return (
         <div className='mt-2'>
 

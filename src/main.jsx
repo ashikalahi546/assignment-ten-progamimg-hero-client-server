@@ -13,6 +13,7 @@ import MyList from "./components/MyList";
 import AuthProvider from "./components/auth/AuthProvider";
 import TouristViewDetails from "./components/TouristViewDetails";
 import PrivateRoute from "./components/private/PrivateRoute";
+import UpdateTravelars from "./components/UpdateTravelars";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
         path:'/touristViewDetails/:id',
         element:<TouristViewDetails/>,
         
+      },
+      {
+        path:'/updatetravelars/:id',
+        element:<UpdateTravelars/>,
+        loader:({params})=>fetch(`http://localhost:8000/travelers/${params.id}`)
       }
     ],
   },

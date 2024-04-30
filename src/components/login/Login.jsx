@@ -19,6 +19,7 @@ const Login = () => {
   const {loginUser,googleLogin,twitterLogin} = useContext(AuthContext)
   const handleLogin = e =>{
     e.preventDefault()
+    
   
     const email = e.target.email.value;
     const password = e.target.password.value;
@@ -45,7 +46,7 @@ const Login = () => {
 
       setSuccess('User logged Successfully')
 
-      navigate(from, { replace: true });
+      navigate(from,  {replace: true });
     })
     .catch(err =>{
       setError(err.message)
