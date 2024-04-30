@@ -21,7 +21,7 @@ const SingleList = ({ singleList,setTravelars,travelars }) => {
     
 console.log('delete confirm')
 
-fetch(`https://assignment-server-rho-snowy.vercel.app/${_id}`,{
+fetch(`https://assignment-server-rho-snowy.vercel.app/travelers${_id}`,{
     method:"DELETE"
 })
 .then(res => res.json())
